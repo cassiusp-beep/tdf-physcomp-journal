@@ -16,7 +16,7 @@ The table rebuilds itself on every push. "Missing" lists the required parts an e
 | 2026-10-22 | 1 | Fabrication | [W1 E2: Laser cutting, joinery and the 737 ring](entries/2026-10-22-w1-fabrication/README.md) · [Medium](https://medium.com/@cassiusp/w1-e2-tdf-physcomp-ea0f7cbf61ea) | C16 | ready | none |
 | 2026-10-27 | 2 | Electronics | [W2 E1: Reading the board and the voltage divider](entries/2026-10-27-w2-electronics/README.md) · [Medium](https://medium.com/@cassiusp/w2-e1-tdf-physcomp-f884e30fba15) | C17 | ready | video |
 | 2026-10-29 | 2 | Fabrication | [W2 E2: Ring review, mechanisms and 3D printing](entries/2026-10-29-w2-fabrication/README.md) · [Medium](https://medium.com/@cassiusp/w2-e2-tdf-physcomp-eac642b391b3) | C18 | ready | none |
-| 2026-11-03 | 3 | Electronics | [W3 E1: Motion, detected: a PIR sensor that moves a servo](entries/2026-11-03-w3-electronics/README.md) | C19 | draft | video, images |
+| 2026-11-03 | 3 | Electronics | [W3 E1: Personal space, a PIR build and an ultrasonic sign](entries/2026-11-03-w3-electronics/README.md) | C19 | draft | video |
 | 2026-11-05 | 3 | Fabrication | [W3 E2: 3D printing the 737 ring](entries/2026-11-05-w3-fabrication/README.md) | C20 | draft | none |
 | 2026-11-10 | 4 | Project | [W4 E1: Expressive Mechanics, the camshaft dragon automaton](entries/2026-11-10-w4-project/README.md) | C19 | draft | video |
 | 2026-11-12 | 4 | Diagrammatic analysis | [W4 analysis: the turntable dragon as a system](entries/2026-11-12-w4-analysis/README.md) | C17 | draft | none |

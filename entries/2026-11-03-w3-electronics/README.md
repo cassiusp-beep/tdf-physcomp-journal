@@ -1,5 +1,5 @@
 ---
-title: W3 E1: Motion, detected: a PIR sensor that moves a servo
+title: "W3 E1: Personal space, a PIR build and an ultrasonic sign"
 date: 2026-11-03
 week: 3
 type: electronics
@@ -9,118 +9,82 @@ medium:
 status: draft
 ---
 
-# W3 E1: Motion, detected: a PIR sensor that moves a servo
+# W3 E1: Personal space, a PIR build and an ultrasonic sign
 
 **Week 3 · Electronics · Tue Nov 3, 2026**
-Lecture: [C19](../../sources/lecture-slides.md) · Medium article: _add link_
+Lecture: [C19](../../sources/lecture-slides.md) · Tinkercad: [Personal Space Servo](https://www.tinkercad.com/things/iATx6h2WW2H-personal-space-servo)
 
 ## Assignment
 
-"Make 'something interesting' happen with: servo motor; ultrasonic or PIR sensor. Document this work in your design journal" [C17, slide 28].
+"Make 'something interesting' happen with: servo motor; ultrasonic or PIR sensor. Document this work in your design journal: 1 video + some images, code files + circuit diagrams, a short write-up of your experiments and the results" [C17, slide 28].
 
 ## What I did
 
-I wired a PIR motion sensor to a servo so that a person walking into view makes the machine physically react. I built and demoed it in class on Tuesday, November 3.
+I explored the prompt with both sensors, around one idea: a servo that reacts to someone entering your personal space.
 
-I picked the PIR because it answers a more human question. A distance sensor asks *how far away are you?* A PIR asks *is anyone here?*
+**Physical build: PIR + servo.** On the kit's Arduino Uno, I wired a PIR motion sensor to a micro servo so that someone walking into view makes the servo turn. I built and demoed it in class on Tuesday, November 3. I didn't capture photos, video or the code of that build, and it has since been taken apart, so it isn't documented below.
 
-**Circuit.** Three kit parts: Elegoo Arduino Uno R3, PIR motion sensor, micro servo, all on the Arduino's 5V rail. Prototyped in Tinkercad first, then built on a breadboard. Red jumpers carry 5V and black carry ground, per the class color code [C17, slide 21].
+**Tinkercad build: the Personal Space Servo (ultrasonic).** In Tinkercad I built the same idea with the ultrasonic distance sensor (HC-SR04) instead. The servo horn acts as a sign:
 
-| Part | Pin | Arduino |
-|---|---|---|
-| PIR sensor | VCC | 5V |
-| PIR sensor | GND | GND |
-| PIR sensor | OUT | Digital pin 2 |
-| Micro servo | Red | 5V |
-| Micro servo | Brown | GND |
-| Micro servo | Orange (signal) | Digital pin 9 |
+- Nobody within 50 cm: the sign lies horizontal (0°).
+- Someone closer than 50 cm for half a second: the sign stands vertical (90°) and gives a warning shake of 15° each way.
+- Once they back off for a full second, the sign eases back down.
 
-**Code.** A loop that asks one question: is the PIR's output HIGH? On motion, the servo turns to its alert angle; when motion stops, it returns to rest. The sketch prints the sensor state to the Serial Monitor. A PIR only outputs on or off and holds HIGH for a few seconds after motion stops, so the servo can't track *where* you are, only *that* you are.
-
-**Documentation note.** I didn't capture photos or video of the physical build in class, and it has since been taken apart. The Tinkercad model is the design the hardware was built from, and the sketch below implements the same behavior.
+The code smooths the distance readings and adds 5 cm of hysteresis at the boundary, so the sign doesn't flicker when someone stands right at the edge. The two delays give it a little patience: a passer-by doesn't trigger it, and it doesn't drop the moment you step back.
 
 ## Media
 
-<!-- Tinkercad breadboard screenshot, schematic export, screen recording of the simulation:
-![Tinkercad breadboard](media/tinkercad-breadboard.png)
-![Tinkercad schematic](media/tinkercad-schematic.png)
-[Video: simulation](media/pir-servo-sim.mp4) -->
+![Personal Space Servo: Tinkercad breadboard view](media/tinkercad-breadboard.jpg)
+
+![Wiring detail: TRIG on pin 7, ECHO on pin 6, servo signal on pin 9](media/tinkercad-wiring-detail.png)
+
+<!-- Video: screen-record the Tinkercad simulation (Start Simulation, click the sensor, drag the target inside 50 cm) and add it here:
+[Video: Personal Space Servo simulation](media/personal-space-servo-sim.mp4) -->
 
 ## Code and circuit
 
-Full sketch: [`code/pir_servo.ino`](code/pir_servo.ino). The wiring table above is the circuit; add the Tinkercad schematic export to `media/` for the diagram.
+| Part | Pin | Arduino |
+|---|---|---|
+| HC-SR04 | VCC | 5V |
+| HC-SR04 | TRIG | Digital pin 7 |
+| HC-SR04 | ECHO | Digital pin 6 |
+| HC-SR04 | GND | GND |
+| Micro servo | PWR (red) | 5V |
+| Micro servo | SIG (orange) | Digital pin 9 |
+| Micro servo | GND (brown) | GND |
+
+![Personal Space Servo schematic, exported from Tinkercad](media/tinkercad-schematic.png)
+
+Full sketch: [`code/personal_space_servo.ino`](code/personal_space_servo.ino), copied from the Tinkercad design.
 
 ```cpp
-/*
-  W3 E1: Motion, detected
-  A PIR motion sensor turns a servo to an "alert" angle when someone is
-  present, and lets it settle back to rest once the PIR goes quiet.
-
-  Wiring (Arduino Uno R3):
-    PIR VCC  -> 5V        PIR GND -> GND        PIR OUT -> pin 2
-    Servo red -> 5V       Servo brown -> GND    Servo orange (signal) -> pin 9
-*/
-
-#include <Servo.h>
-
-const int PIR_PIN   = 2;
+const int TRIG_PIN = 7;
+const int ECHO_PIN = 6;
 const int SERVO_PIN = 9;
 
-const int REST_ANGLE  = 0;    // nobody here
-const int ALERT_ANGLE = 90;   // someone walked in
-const int STEP_DELAY  = 8;    // ms per degree, so the turn reads as a gesture
+const int PRESENCE_CM = 50;    // closer than this counts as "too close"
+const int HYSTERESIS = 5;      // keeps it from flickering at the edge
 
-Servo gesture;
-int currentAngle = REST_ANGLE;
-int lastState = LOW;
+const unsigned long ENTER_DELAY_MS = 500;   // must stay close this long before it reacts
+const unsigned long EXIT_DELAY_MS = 1000;   // holds the sign up this long after you leave
 
-void easeTo(int target) {
-  while (currentAngle != target) {
-    currentAngle += (target > currentAngle) ? 1 : -1;
-    gesture.write(currentAngle);
-    delay(STEP_DELAY);
-  }
-}
-
-void setup() {
-  Serial.begin(9600);
-  pinMode(PIR_PIN, INPUT);
-  gesture.attach(SERVO_PIN);
-  gesture.write(REST_ANGLE);
-  Serial.println("Warming up the PIR...");
-  delay(2000);   // PIR sensors need a moment to settle after power-up
-  Serial.println("Ready");
-}
-
-void loop() {
-  int state = digitalRead(PIR_PIN);
-
-  if (state != lastState) {          // only act when presence changes
-    if (state == HIGH) {
-      Serial.println("Motion detected -> alert");
-      easeTo(ALERT_ANGLE);
-    } else {
-      Serial.println("Motion ended -> rest");
-      easeTo(REST_ANGLE);
-    }
-    lastState = state;
-  }
-
-  delay(50);
-}
+const int ANGLE_IDLE = 0;        // horizontal
+const int ANGLE_TOO_CLOSE = 90;  // vertical
+const int SHAKE_AMOUNT = 15;     // degrees each way for the warning shake
 ```
 
 ## Results and reflection
 
-The PIR worked as built: walk into its field and the servo turns to its alert angle, step away and it settles back to rest. Choosing a PIR over the ultrasonic sensor changed what the machine could know. A distance sensor asks how far away you are. A PIR only asks whether anyone is there, so the servo can switch between two states but can never track you.
+Working with both sensors showed me how much the choice of sensor decides what a machine can know. The PIR asks only whether anyone is there, so my class build could switch between two states but never track a person. The ultrasonic sensor measures how far away you are, which let the Tinkercad version draw a line: 50 cm becomes a boundary, and crossing it is what the sign reacts to.
 
-The PIR's hold time turned into behavior. Because the output stays HIGH for a few seconds after motion stops, the servo lingers before it relaxes. In a character, that pause could read as attention or hesitation, which is a useful idea going into Expressive Mechanics.
+The timing turned into behavior. The PIR holds its signal for a few seconds after motion stops, so the servo lingered before relaxing. In the Personal Space Servo I designed that delay on purpose: half a second before it reacts, a full second before it relaxes. Those two numbers are what make it read as a polite warning rather than a twitchy alarm.
 
-Prototyping in Tinkercad first caught wiring and logic mistakes before I touched the kit. The lesson I'm keeping is about documentation: I demoed this in class without filming it, and the build is gone. Next time the phone comes out before the breadboard does.
+The lesson I'm keeping is about documentation. I demoed the PIR build without filming it, and now only the Tinkercad version is on record. Next time the phone comes out before the breadboard does.
 
-_AI use: drafted with Claude from my build notes, README and Medium posts, then reviewed by me [C01, slide 46]._
+_AI use: drafted with Claude from my build notes, Tinkercad design and code, then reviewed by me [C01, slide 46]._
 
 ## Sources
 
 - [C19] 2026 TDF - PhysComp class 19 - Project 1 intro - p5.js
 - [C17] class 17 deck, servo + sensor homework slide and wire color codes
+- Tinkercad design: [Personal Space Servo](https://www.tinkercad.com/things/iATx6h2WW2H-personal-space-servo) (private)
