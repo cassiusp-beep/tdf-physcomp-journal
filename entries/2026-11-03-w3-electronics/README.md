@@ -30,14 +30,14 @@ I picked the PIR because it answers a more human question. A distance sensor ask
 |---|---|---|
 | PIR sensor | VCC | 5V |
 | PIR sensor | GND | GND |
-| PIR sensor | OUT | Digital pin _[#]_ |
+| PIR sensor | OUT | Digital pin 2 |
 | Micro servo | Red | 5V |
 | Micro servo | Brown | GND |
-| Micro servo | Orange (signal) | Digital pin _[#]_ |
+| Micro servo | Orange (signal) | Digital pin 9 |
 
 **Code.** A loop that asks one question: is the PIR's output HIGH? On motion, the servo turns to its alert angle; when motion stops, it returns to rest. The sketch prints the sensor state to the Serial Monitor. A PIR only outputs on or off and holds HIGH for a few seconds after motion stops, so the servo can't track *where* you are, only *that* you are.
 
-**Documentation note.** I didn't capture photos or video of the physical build in class, and it has since been taken apart. The Tinkercad model and code below are the design the hardware was built from.
+**Documentation note.** I didn't capture photos or video of the physical build in class, and it has since been taken apart. The Tinkercad model is the design the hardware was built from, and the sketch below implements the same behavior.
 
 ## Media
 
@@ -48,11 +48,77 @@ I picked the PIR because it answers a more human question. A distance sensor ask
 
 ## Code and circuit
 
-<!-- Put pir_servo.ino in ./code. The wiring table above plus the Tinkercad schematic count as the circuit diagram. -->
+Full sketch: [`code/pir_servo.ino`](code/pir_servo.ino). The wiring table above is the circuit; add the Tinkercad schematic export to `media/` for the diagram.
+
+```cpp
+/*
+  W3 E1: Motion, detected
+  A PIR motion sensor turns a servo to an "alert" angle when someone is
+  present, and lets it settle back to rest once the PIR goes quiet.
+
+  Wiring (Arduino Uno R3):
+    PIR VCC  -> 5V        PIR GND -> GND        PIR OUT -> pin 2
+    Servo red -> 5V       Servo brown -> GND    Servo orange (signal) -> pin 9
+*/
+
+#include <Servo.h>
+
+const int PIR_PIN   = 2;
+const int SERVO_PIN = 9;
+
+const int REST_ANGLE  = 0;    // nobody here
+const int ALERT_ANGLE = 90;   // someone walked in
+const int STEP_DELAY  = 8;    // ms per degree, so the turn reads as a gesture
+
+Servo gesture;
+int currentAngle = REST_ANGLE;
+int lastState = LOW;
+
+void easeTo(int target) {
+  while (currentAngle != target) {
+    currentAngle += (target > currentAngle) ? 1 : -1;
+    gesture.write(currentAngle);
+    delay(STEP_DELAY);
+  }
+}
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(PIR_PIN, INPUT);
+  gesture.attach(SERVO_PIN);
+  gesture.write(REST_ANGLE);
+  Serial.println("Warming up the PIR...");
+  delay(2000);   // PIR sensors need a moment to settle after power-up
+  Serial.println("Ready");
+}
+
+void loop() {
+  int state = digitalRead(PIR_PIN);
+
+  if (state != lastState) {          // only act when presence changes
+    if (state == HIGH) {
+      Serial.println("Motion detected -> alert");
+      easeTo(ALERT_ANGLE);
+    } else {
+      Serial.println("Motion ended -> rest");
+      easeTo(REST_ANGLE);
+    }
+    lastState = state;
+  }
+
+  delay(50);
+}
+```
 
 ## Results and reflection
 
-<!-- Your own words. Starting points from the Medium draft: presence vs. proximity; the PIR hold time reads like hesitation; simulating first caught mistakes. -->
+The PIR worked as built: walk into its field and the servo turns to its alert angle, step away and it settles back to rest. Choosing a PIR over the ultrasonic sensor changed what the machine could know. A distance sensor asks how far away you are. A PIR only asks whether anyone is there, so the servo can switch between two states but can never track you.
+
+The PIR's hold time turned into behavior. Because the output stays HIGH for a few seconds after motion stops, the servo lingers before it relaxes. In a character, that pause could read as attention or hesitation, which is a useful idea going into Expressive Mechanics.
+
+Prototyping in Tinkercad first caught wiring and logic mistakes before I touched the kit. The lesson I'm keeping is about documentation: I demoed this in class without filming it, and the build is gone. Next time the phone comes out before the breadboard does.
+
+_AI use: drafted with Claude from my build notes, README and Medium posts, then reviewed by me [C01, slide 46]._
 
 ## Sources
 

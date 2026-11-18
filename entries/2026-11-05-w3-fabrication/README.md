@@ -45,7 +45,13 @@ Not applicable (fabrication entry). Put the STL or 3MF in ./code.
 
 ## Results and reflection
 
-<!-- Your own words: laser vs. 3DP, what the layer lines and supports did to the wing surfaces, fit on two fingers. -->
+Last week I predicted what would and wouldn't survive moving the 737 from the laser cutter to the printer. The scored lines had no equivalent, since a printer can't score, so every window, door and panel seam had to become real geometry. That turned out to be the main gain: the printed ring has a fuselage with windows, engines on pylons, swept wings and a full tail, none of which plywood layers could carry.
+
+The design rules shaped it the way the laser's rules did. The 1 mm minimum detail and 1.5 mm minimum wall decided how thin the wingtips and stabilizers could go, and on a part this large the brim and layer height mattered for it to print at all.
+
+Wearing both versions makes the comparison concrete. The laser-cut ring reads as a drawing made solid; the printed one reads as an object. The same idea, translated between machines, became something different on each.
+
+_AI use: drafted with Claude from my build notes, README and Medium posts, then reviewed by me [C01, slide 46]._
 
 ## Sources
 

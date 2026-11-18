@@ -54,7 +54,13 @@ Present Expressive Mechanics at the start of class and submit documentation on b
 
 ## Results and reflection
 
-<!-- Your own words: critique feedback, what "emotion" the final machine expresses, what you'd do with another week. -->
+At 3 AM before the demo I traded cams for gears: one pinion, one ring gear, one platter. Keeping the dragon, the Uno, the H-bridge and the code meant the pivot cost a night instead of the project. Fewer parts meant fewer places to bind, and Rhino could check the whole gear mesh through a full turn.
+
+The interaction pivoted for a similar reason. Screaming to speed the dragon up depended on fine speed control, but with only about 4 V at the motor, calm and full speed looked almost the same. A smile switch, spin for ten seconds or stop, is something the hardware can show clearly. The interaction had to fit what the machine could express.
+
+Bench testing taught me to suspect power and wiring before code: weak USB power, and an IN2 signal that never reached the L298N. Swapping the motor leads fixed direction without touching software. If I had another week, I'd bring back speed control with a stronger supply so the dragon could have more than one mood.
+
+_AI use: drafted with Claude from my build notes, README and Medium posts, then reviewed by me [C01, slide 46]._
 
 ## Sources
 

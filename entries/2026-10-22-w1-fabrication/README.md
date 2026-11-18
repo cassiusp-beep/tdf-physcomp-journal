@@ -79,6 +79,16 @@ From flat to volumetric. A plane is a volume, and a laser cutter only cuts flat 
 
 Each step up reads as curvature. Dense rows of scored lines along the fuselage edges fake the shading that a raster engrave would normally do.
 
+### Reflection
+
+The brief asked for a ring about who I am, and an airplane was the honest answer. The harder question was how to make a volume on a machine that only cuts flat sheet. My architecture training answered it: stack and frame is a section model, so I sliced the 737 into layers and let each step up read as curvature.
+
+The file rules pushed the design as much as the concept did. With no gradients allowed, I drew the fuselage's roundness as rows of scored lines packed tighter toward the edges, which is hatching done by a laser. Working inside the machine's limits produced a better drawing than the one I started with.
+
+What I'd watch next time is fit. A two-finger band that's off by a millimeter is unwearable, so measuring carefully and cutting a fit test first matters more than any surface detail.
+
+_AI use: drafted with Claude from my build notes, README and Medium posts, then reviewed by me [C01, slide 46]._
+
 ## Sources
 
 - [C16] 2026 TDF - PhysComp class 16 - Lasercutting & Joinery

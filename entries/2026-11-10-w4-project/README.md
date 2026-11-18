@@ -55,7 +55,13 @@ Project 1, Expressive Mechanics: "Give the machine emotions." A kinetic sculptur
 
 ## Results and reflection
 
-<!-- Your own words: what the jam taught you about tolerance stacking, and what you'd keep from the automaton. -->
+I went into Expressive Mechanics planning to follow Mo's process: assume the first size is wrong and test it. I did, with a printed fit-test ladder and every clearance in one FIT block, and the automaton still jammed. The Rhino sweep found why: the head push rod's foot hit the guide block for most of the turn. A reprinted guide bar and a trimmed foot didn't free it.
+
+The real lesson was tolerance stacking. Six cams, six rods, cradles, wing linkages and a two-piece printed shaft all had to line up within fractions of a millimeter. Each part could be within tolerance and the machine could still bind, because the errors add up. The brief's advice, build one simple mechanism and repeat it, was the advice I hadn't taken.
+
+I'd keep the parametric approach. Driving the whole model from Python made it fast to diagnose and reprint, and it's why I could pivot overnight.
+
+_AI use: drafted with Claude from my build notes, README and Medium posts, then reviewed by me [C01, slide 46]._
 
 ## Sources
 
