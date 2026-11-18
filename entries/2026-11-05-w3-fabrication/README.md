@@ -1,5 +1,5 @@
 ---
-title: 3D printing the 737 ring
+title: W3 E2: 3D printing the 737 ring
 date: 2026-11-05
 week: 3
 type: fabrication
@@ -9,7 +9,7 @@ medium:
 status: draft
 ---
 
-# 3D printing the 737 ring
+# W3 E2: 3D printing the 737 ring
 
 **Week 3 · Fabrication · Thu Nov 5, 2026**
 Lecture: [C18](../../sources/lecture-slides.md), [C19](../../sources/lecture-slides.md)

@@ -1,5 +1,5 @@
 ---
-title: "Motion, Detected: a PIR sensor that moves a servo"
+title: W3 E1: Motion, detected: a PIR sensor that moves a servo
 date: 2026-11-03
 week: 3
 type: electronics
@@ -9,7 +9,7 @@ medium:
 status: draft
 ---
 
-# Motion, Detected: a PIR sensor that moves a servo
+# W3 E1: Motion, detected: a PIR sensor that moves a servo
 
 **Week 3 · Electronics · Tue Nov 3, 2026**
 Lecture: [C19](../../sources/lecture-slides.md) · Medium article: _add link_

@@ -1,5 +1,5 @@
 ---
-title: "Diagrammatic analysis: the turntable dragon as a system"
+title: W4 analysis: the turntable dragon as a system
 date: 2026-11-12
 week: 4
 type: analysis
@@ -9,7 +9,7 @@ medium:
 status: draft
 ---
 
-# Diagrammatic analysis: the turntable dragon as a system
+# W4 analysis: the turntable dragon as a system
 
 **Required once per journal submission** [C17, slide 7]. This one covers the Project 1 submission.
 

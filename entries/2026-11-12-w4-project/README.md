@@ -1,5 +1,5 @@
 ---
-title: "Expressive Mechanics, part 2: the smile-controlled turntable dragon"
+title: W4 E2: Expressive Mechanics, the smile-controlled turntable dragon
 date: 2026-11-12
 week: 4
 type: project
@@ -9,7 +9,7 @@ medium:
 status: draft
 ---
 
-# Expressive Mechanics, part 2: the smile-controlled turntable dragon
+# W4 E2: Expressive Mechanics, the smile-controlled turntable dragon
 
 **Week 4 · Project · Thu Nov 12, 2026 (critique)**
 Lecture: [C07](../../sources/lecture-slides.md) (critique format, first rotation) · Full build repo: [turntable-dragon](https://github.com/cassiusp-beep/turntable-dragon)

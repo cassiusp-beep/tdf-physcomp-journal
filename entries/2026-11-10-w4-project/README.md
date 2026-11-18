@@ -1,5 +1,5 @@
 ---
-title: "Expressive Mechanics, part 1: the camshaft dragon automaton"
+title: W4 E1: Expressive Mechanics, the camshaft dragon automaton
 date: 2026-11-10
 week: 4
 type: project
@@ -9,7 +9,7 @@ medium:
 status: draft
 ---
 
-# Expressive Mechanics, part 1: the camshaft dragon automaton
+# W4 E1: Expressive Mechanics, the camshaft dragon automaton
 
 **Week 4 · Project · Nov 9 to 11, 2026**
 Lecture: [C19](../../sources/lecture-slides.md) · Full build repo: [turntable-dragon](https://github.com/cassiusp-beep/turntable-dragon)
