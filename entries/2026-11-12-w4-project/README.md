@@ -43,6 +43,10 @@ Present Expressive Mechanics at the start of class and submit documentation on b
 
 ![Motor and printed parts](media/07_build_motor_and_printed_parts.jpg)
 
+[![The turntable dragon spinning on the counter, wired to the Uno and L298N](media/smile-dragon-demo-still.jpg)](media/smile-dragon-demo.mp4)
+
+[Video: smile-controlled turntable dragon (MP4, 14 s)](media/smile-dragon-demo.mp4). The laptop webcam runs `smile_dragon.py`; when the smile crosses the threshold, the Uno drives the gearmotor through the L298N and the dragon spins on its platter.
+
 ![smile_dragon.py running on the laptop webcam: the overlay reads "off, smile +6% (on at +10%)", so the dragon stays still until the smile crosses the threshold](media/smile-detector-running.jpg)
 
 **At the critique (Nov 12):** the finished turntable with the Flexi Dragon curled around the printed dragon eggs, wired to the Uno and L298N, with the laptop webcam watching for a smile.

@@ -46,6 +46,10 @@ Project 1, Expressive Mechanics: "Give the machine emotions." A kinetic sculptur
 
 ![Printed rods with the H-bridge and motor](media/06_build_hbridge_motor_printed_rods.jpg)
 
+![Rhino animation of the camshaft automaton: one full revolution](media/camshaft-automaton-animation.gif)
+
+[Video: camshaft automaton, Rhino animation (MP4, 6 s)](media/camshaft-automaton-animation.mp4). One full camshaft revolution in 36 steps of 10°, rendered in Rhino from `dragon_automaton.py`: the cams lift the push rods so the wave runs along the dragon, and the wing cam flaps the wings. The physical build jammed, so this shows the motion as designed. Animated through the Rhino MCP with Claude Code.
+
 ![Camshaft dragon automaton: slideshow of sketches, renders and build photos](media/camshaft-automaton-slideshow.gif)
 
 [Video: camshaft automaton slideshow (MP4, 20 s)](media/camshaft-automaton-slideshow.mp4). There's no footage of the automaton running, since it jammed before it could turn freely, so this is a captioned slideshow of the reference, sketches, Rhino model, renders and build photos, in the order the design developed.
