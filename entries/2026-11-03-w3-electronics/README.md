@@ -36,8 +36,10 @@ I designed and simulated it in Tinkercad first, then built it on the kit's Ardui
 
 ![Wiring detail: TRIG on pin 7, ECHO on pin 6, servo signal on pin 9](media/tinkercad-wiring-detail.png)
 
-<!-- Video: screen-record the Tinkercad simulation (Start Simulation, click the sensor, drag the target inside 50 cm) and add it here:
-[Video: Personal Space Servo simulation](media/personal-space-servo-sim.mp4) -->
+![Personal Space Servo simulation: the sign stands up when the target comes inside 50 cm](media/personal-space-servo-sim.gif)
+
+[Video: Personal Space Servo simulation (MP4, 15 s)](media/personal-space-servo-sim.mp4). In the Tinkercad simulation, the target moves from 252.6 cm to 133.7 cm (sign stays flat), then to 27 cm (after half a second the sign stands up and shakes), then back out past 50 cm (the sign holds for a second, then lowers).
+
 
 ## Code and circuit
 
