@@ -22,7 +22,7 @@ Lecture: [C19](../../sources/lecture-slides.md) · Tinkercad: [Personal Space Se
 
 I explored the prompt with both sensors, around one idea: a servo that reacts to someone entering your personal space.
 
-**Physical build: PIR + servo.** On the kit's Arduino Uno, I wired a PIR motion sensor to a micro servo so that someone walking into view makes the servo turn. I built and demoed it in class on Tuesday, November 3. I didn't capture photos, video or the code of that build, and it has since been taken apart, so it isn't documented below.
+**Physical build: PIR + servo.** On the kit's Arduino Uno, I wired a PIR motion sensor to a micro servo so that someone walking into view makes the servo turn. I built it and brought it to class on Tuesday, November 3, but I forgot to document the process entirely: no photos, no video, no saved code. Given my time constraints I won't be reconstructing it, so the PIR build isn't documented below, and the Tinkercad version stands as the record of this exercise.
 
 **Tinkercad build: the Personal Space Servo (ultrasonic).** In Tinkercad I built the same idea with the ultrasonic distance sensor (HC-SR04) instead. The servo horn acts as a sign:
 
@@ -79,7 +79,7 @@ Working with both sensors showed me how much the choice of sensor decides what a
 
 The timing turned into behavior. The PIR holds its signal for a few seconds after motion stops, so the servo lingered before relaxing. In the Personal Space Servo I designed that delay on purpose: half a second before it reacts, a full second before it relaxes. Those two numbers are what make it read as a polite warning rather than a twitchy alarm.
 
-The lesson I'm keeping is about documentation. I demoed the PIR build without filming it, and now only the Tinkercad version is on record. Next time the phone comes out before the breadboard does.
+The lesson I'm keeping is about documentation. I brought the PIR build to class without documenting any of it, and rather than rebuild it on a tight schedule, I'm letting the Tinkercad version stand as the record. Next time the phone comes out before the breadboard does.
 
 _AI use: drafted with Claude from my build notes, Tinkercad design and code, then reviewed by me [C01, slide 46]._
 
