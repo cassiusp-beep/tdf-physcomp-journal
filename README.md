@@ -17,18 +17,20 @@ The table rebuilds itself on every push. "Missing" lists the required parts an e
 | 2026-10-27 | 2 | Electronics | [W2 E1: Reading the board and the voltage divider](entries/2026-10-27-w2-electronics/README.md) · [Medium](https://medium.com/@cassiusp/w2-e1-tdf-physcomp-f884e30fba15) | C17 | ready | video |
 | 2026-10-29 | 2 | Fabrication | [W2 E2: Ring review, mechanisms and 3D printing](entries/2026-10-29-w2-fabrication/README.md) · [Medium](https://medium.com/@cassiusp/w2-e2-tdf-physcomp-eac642b391b3) | C18 | ready | video |
 | 2026-11-03 | 3 | Electronics | [W3 E1: Motion, detected: a PIR sensor that moves a servo](entries/2026-11-03-w3-electronics/README.md) | C19 | draft | video, images, code, write-up |
-| 2026-11-05 | 3 | Fabrication | [W3 E2: 3D printing the 737 ring](entries/2026-11-05-w3-fabrication/README.md) | C19 | draft | video, write-up |
+| 2026-11-05 | 3 | Fabrication | [W3 E2: 3D printing the 737 ring](entries/2026-11-05-w3-fabrication/README.md) | C20 | draft | video, write-up |
 | 2026-11-10 | 4 | Project | [W4 E1: Expressive Mechanics, the camshaft dragon automaton](entries/2026-11-10-w4-project/README.md) | C19 | draft | video, write-up |
 | 2026-11-12 | 4 | Diagrammatic analysis | [W4 analysis: the turntable dragon as a system](entries/2026-11-12-w4-analysis/README.md) | C17 | draft | none |
 | 2026-11-12 | 4 | Project | [W4 E2: Expressive Mechanics, the smile-controlled turntable dragon](entries/2026-11-12-w4-project/README.md) | C07 | draft | video, write-up |
-| 2026-11-17 | 5 | Electronics | [Week 5 Electronics](entries/2026-11-17-w5-electronics/README.md) |  | draft | video, images, code, write-up |
+| 2026-11-17 | 5 | Electronics | [W5 E1: ESP32 and web APIs](entries/2026-11-17-w5-electronics/README.md) | C23 | draft | video, images, code, write-up |
 <!-- INDEX:END -->
 
 ## Deadlines
 
 | Date | What |
 |---|---|
-| Thu Nov 12, 2026 | Project 1: Expressive Mechanics due, with journal link on bCourses |
+| Thu Nov 12, 2026 | Project 1: Expressive Mechanics presented |
+| **Thu Nov 19, 2026** | **Project 1 documentation due on bCourses (extended)** [C23, slide 4] |
+| Tue Nov 24, 2026 | ESP32 setup and web API homework [C23, slides 17 and 19] |
 | Tue Dec 8, 2026 | Project 2: Ambient Display due at the Jacobs Design Showcase |
 
 ## How the automation works

@@ -4,7 +4,7 @@ date: 2026-11-05
 week: 3
 type: fabrication
 project: pre-projects
-slides: C19
+slides: C20
 medium:
 status: draft
 ---
@@ -12,13 +12,14 @@ status: draft
 # W3 E2: 3D printing the 737 ring
 
 **Week 3 · Fabrication · Thu Nov 5, 2026**
-Lecture: [C18](../../sources/lecture-slides.md), [C19](../../sources/lecture-slides.md)
+Lecture: [C20](../../sources/lecture-slides.md) · Assignment from [C18](../../sources/lecture-slides.md)
 
 ## Assignment
 
 - **Part one:** "Recreate your lasercut ring for 3DP. Try and print an exact copy of your laser cut ring... however it prints that's what you turn in. (We want to see the difference between laser and 3DP.)" Suggested method: import the Illustrator file into Fusion 360 and extrude 3 mm [C18, slides 52 and 53].
 - **Part two:** a second ring designed for 3DP. No wall under 1.5 mm, no detail under 1 mm. "Be creative, be experimental, be bold" [C18, slides 54 to 57].
 - Add 3D printed ring photos to the class deck [C19, slide 26].
+- In class: rings shown and voted on [C20, slides 3 and 4]; gears and linkages, from sketch to tolerance test [C20, slides 5 to 23]; servos and pushrod connections [C20, slides 28 to 35; T-PUSH]; Expressive Mechanics sketch share-out [C20, slide 36].
 
 ## What I did
 
@@ -50,3 +51,5 @@ Not applicable (fabrication entry). Put the STL or 3MF in ./code.
 
 - [C18] 2026 TDF - PhysComp class 18 - 3DP & Additive Manufacturing
 - [C19] class 19 deck, ring photo homework slide
+- [C20] 2026 TDF - PhysComp class 20 - Servos and More
+- [T-PUSH] Adafruit, Pushrod Garage

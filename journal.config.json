@@ -5,7 +5,9 @@
   "timezone": "America/Los_Angeles",
   "first_class": "2026-10-20",
   "last_class": "2026-12-10",
-  "no_class_dates": ["2026-11-26"],
+  "no_class_dates": [
+    "2026-11-26"
+  ],
   "entry_types": {
     "tuesday": "electronics",
     "thursday": "fabrication"
@@ -15,16 +17,47 @@
     "2026-10-22": "C16",
     "2026-10-27": "C17",
     "2026-10-29": "C18",
-    "2026-11-03": "C19"
+    "2026-11-03": "C19",
+    "2026-11-05": "C20",
+    "2026-11-17": "C23"
   },
   "projects": [
-    {"id": "pre-projects", "name": "Skill building (weeks 1 to 3)", "start": "2026-10-20", "end": "2026-11-06"},
-    {"id": "expressive-mechanics", "name": "Project 1: Expressive Mechanics", "start": "2026-11-03", "end": "2026-11-12", "brief": "B-EM"},
-    {"id": "ambient-display", "name": "Project 2: Ambient Display", "start": "2026-11-13", "end": "2026-12-08", "brief": "B-AD"}
+    {
+      "id": "pre-projects",
+      "name": "Skill building (weeks 1 to 3)",
+      "start": "2026-10-20",
+      "end": "2026-11-06"
+    },
+    {
+      "id": "expressive-mechanics",
+      "name": "Project 1: Expressive Mechanics",
+      "start": "2026-11-03",
+      "end": "2026-11-12",
+      "brief": "B-EM"
+    },
+    {
+      "id": "ambient-display",
+      "name": "Project 2: Ambient Display",
+      "start": "2026-11-13",
+      "end": "2026-12-08",
+      "brief": "B-AD"
+    }
   ],
   "submissions": {
-    "project-1": {"title": "Project 1 submission: Expressive Mechanics", "from": "2026-10-20", "to": "2026-11-12"},
-    "project-2": {"title": "Project 2 submission: Ambient Display", "from": "2026-11-13", "to": "2026-12-10"},
-    "all": {"title": "Full design journal", "from": "2026-10-20", "to": "2026-12-10"}
+    "project-1": {
+      "title": "Project 1 submission: Expressive Mechanics",
+      "from": "2026-10-20",
+      "to": "2026-11-12"
+    },
+    "project-2": {
+      "title": "Project 2 submission: Ambient Display",
+      "from": "2026-11-13",
+      "to": "2026-12-10"
+    },
+    "all": {
+      "title": "Full design journal",
+      "from": "2026-10-20",
+      "to": "2026-12-10"
+    }
   }
 }

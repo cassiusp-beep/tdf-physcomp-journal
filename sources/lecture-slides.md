@@ -11,6 +11,10 @@ Entries cite these with the bracketed keys, for example `[C19]`. All slides are 
 | C17 | Tue Oct 27, 2026 | 2026 TDF - PhysComp class 17 - more Arduino | [Google Slides](https://docs.google.com/presentation/d/1UF0Y4PT8l-j1463Jrghn6yRVEogfWFwaPqIztL6rkBk/edit) |
 | C18 | Thu Oct 29, 2026 | 2026 TDF - PhysComp class 18 - 3DP & Additive Manufacturing | [Google Slides](https://docs.google.com/presentation/d/1s6OeOcqMPJJnHkrGICaqrN-JMgnj0ZF_V-FH73DgvfY/edit) |
 | C19 | Tue Nov 3, 2026 | 2026 TDF - PhysComp class 19 - Project 1 intro - p5.js | [Google Slides](https://docs.google.com/presentation/d/1a6iFhbi9gQVuJXefUk5rT-EuvTpwI9nUy0y9FfBcof4/edit) |
+| C20 | Thu Nov 5, 2026 | 2026 TDF - PhysComp class 20 - Servos and More | [Google Slides](https://docs.google.com/presentation/d/1Ts-tcPBo3KZN5EXHpQm2hRU5AKYysUJkju47CLeZhAw/edit) |
+| C23 | Tue Nov 17, 2026 | 2026 TDF - PhysComp class 23 - Project 2 intro - webAPI | [Google Slides](https://docs.google.com/presentation/d/1bz_bBu9FnbSZvnDWUk6WJn779VvMEqvOj4c2grbaob0/edit) |
+
+Decks for Nov 10 and Nov 12 (classes 21 and 22) weren't posted in the folder as of Nov 17; entries for those dates cite C19 and the first-rotation equivalents below.
 
 ## First-rotation decks (same material, cited where my section's deck wasn't posted yet)
 
@@ -35,10 +39,15 @@ Entries cite these with the bracketed keys, for example `[C19]`. All slides are 
 | T-CV | S. Tewari, *TDF_ComputerVision_HeadPositionControlsServo* (p5.js) | https://editor.p5js.org/loopstick/sketches/5DSqlJBWt |
 | T-PRUSA | Prusa Research, *PrusaSlicer UI overview* | https://help.prusa3d.com/article/ui-overview_1766 |
 | T-APIS | *public-apis* list | https://github.com/public-apis/public-apis |
+| T-PUSH | Adafruit, *Pushrod Garage: pushrod mechanisms* (linked in C20) | https://learn.adafruit.com/pushrod-garage/pushrod-mechanism |
+| T-ESP | S. Tewari, *ESP32 V2 Tutorial* | https://github.com/loopstick/ESP32_V2_Tutorial |
+| T-FEATHER | Adafruit, *ESP32 Feather V2: Getting Started / Arduino IDE setup* | https://learn.adafruit.com/adafruit-esp32-feather-v2 |
+| T-ROOPA | R. Ramanujam, *ESP32 web API example* (weather) | https://github.com/roopa-ramanujam/ESP32-web-api-example |
+| T-METEO | Open-Meteo forecast API (example request in C23) | https://api.open-meteo.com/v1/forecast?latitude=37.876270&longitude=-122.258499&current_weather=true&temperature_unit=fahrenheit |
 
 ## Course briefs (bCourses)
 
 | Key | Brief |
 |---|---|
-| B-EM | Project 1: Expressive Mechanics brief (bCourses). Due Thu Nov 12, 2026. |
-| B-AD | Project 2: Ambient Display brief (bCourses). Due Tue Dec 8, 2026 (Jacobs Design Showcase). |
+| B-EM | Project 1: Expressive Mechanics brief (bCourses). Presented Thu Nov 12, 2026; documentation deadline extended to Thu Nov 19, 2026 [C23, slide 4]. |
+| B-AD | [Project 2: Ambient Display brief](https://docs.google.com/document/d/1wQOCI6CeCQPkwjnwaBbdJw8yfdFQTMGB2vDBeRGBmTQ/edit) (linked in C23, slide 20). Due Tue Dec 8, 2026 (Jacobs Design Showcase). |
