@@ -40,7 +40,6 @@ I designed and simulated it in Tinkercad first, then built it on the kit's Ardui
 
 [Video: Personal Space Servo simulation (MP4, 15 s)](media/personal-space-servo-sim.mp4). In the Tinkercad simulation, the target moves from 252.6 cm to 133.7 cm (sign stays flat), then to 27 cm (after half a second the sign stands up and shakes), then back out past 50 cm (the sign holds for a second, then lowers).
 
-
 ## Code and circuit
 
 | Part | Pin | Arduino |
@@ -80,8 +79,6 @@ Choosing the ultrasonic sensor over the PIR changed what the machine could know.
 The timing turned into behavior. Half a second before it reacts and a full second before it relaxes are what make it read as a polite warning rather than a twitchy alarm. The hysteresis matters for the same reason: without it, someone standing right at 50 cm would make the sign stutter up and down.
 
 Simulating in Tinkercad first let me tune those numbers before touching hardware. The lesson I'm keeping is about documentation. I brought the build to class without recording any of it, and rather than rebuild it on a tight schedule, I'm letting the Tinkercad version stand as the record. Next time the phone comes out before the breadboard does.
-
-_AI use: drafted with Claude from my build notes, Tinkercad design and code, then reviewed by me [C01, slide 46]._
 
 ## Sources
 

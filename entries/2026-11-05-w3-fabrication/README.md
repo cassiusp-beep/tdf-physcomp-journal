@@ -51,8 +51,6 @@ The design rules shaped it the way the laser's rules did. The 1 mm minimum detai
 
 Wearing both versions makes the comparison concrete. The laser-cut ring reads as a drawing made solid; the printed one reads as an object. The same idea, translated between machines, became something different on each.
 
-_AI use: drafted with Claude from my build notes, README and Medium posts, then reviewed by me [C01, slide 46]._
-
 ## Sources
 
 - [C18] 2026 TDF - PhysComp class 18 - 3DP & Additive Manufacturing

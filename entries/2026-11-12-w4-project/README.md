@@ -72,8 +72,6 @@ The interaction pivoted for a similar reason. Screaming to speed the dragon up d
 
 Bench testing taught me to suspect power and wiring before code: weak USB power, and an IN2 signal that never reached the L298N. Swapping the motor leads fixed direction without touching software. If I had another week, I'd bring back speed control with a stronger supply so the dragon could have more than one mood.
 
-_AI use: drafted with Claude from my build notes, README and Medium posts, then reviewed by me [C01, slide 46]._
-
 ## Sources
 
 - [C07] class 07 deck, critique format and submission

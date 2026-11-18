@@ -33,6 +33,10 @@ The table rebuilds itself on every push. "Missing" lists the required parts an e
 | Tue Nov 24, 2026 | ESP32 setup and web API homework [C23, slides 17 and 19] |
 | Tue Dec 8, 2026 | Project 2: Ambient Display due at the Jacobs Design Showcase |
 
+## AI use
+
+Following the course AI policy [C01, slide 46], I used Claude as a drafting and documentation aid in this journal: organizing entries, converting my Medium posts, citing the lecture slides, preparing media, and drafting parts of some write-ups from my own build notes, code and decisions, which I then reviewed. The design work, builds, code decisions and critiques are my own.
+
 ## How the automation works
 
 | Workflow | When it runs | What it does |

@@ -87,8 +87,6 @@ The file rules pushed the design as much as the concept did. With no gradients a
 
 What I'd watch next time is fit. A two-finger band that's off by a millimeter is unwearable, so measuring carefully and cutting a fit test first matters more than any surface detail.
 
-_AI use: drafted with Claude from my build notes, README and Medium posts, then reviewed by me [C01, slide 46]._
-
 ## Sources
 
 - [C16] 2026 TDF - PhysComp class 16 - Lasercutting & Joinery

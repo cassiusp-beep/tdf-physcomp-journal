@@ -67,8 +67,6 @@ The real lesson was tolerance stacking. Six cams, six rods, cradles, wing linkag
 
 I'd keep the parametric approach. Driving the whole model from Python made it fast to diagnose and reprint, and it's why I could pivot overnight.
 
-_AI use: drafted with Claude from my build notes, README and Medium posts, then reviewed by me [C01, slide 46]._
-
 ## Sources
 
 - [C19] 2026 TDF - PhysComp class 19 - Project 1 intro - p5.js
