@@ -43,6 +43,12 @@ flowchart TB
   D --> E --> F
 ```
 
+## The physical system
+
+The same chain, located on the finished build at the Nov 12 critique: the laptop webcam sees the face, the Uno and L298N sit under the base deck, and the motor carriage turns the platter through the ring gear.
+
+![Turntable dragon at critique, annotated](media/turntable-dragon-annotated.jpg)
+
 <!-- Optional: export this as an image (or redraw it by hand) and add your own annotations about where the system can fail: no face in view, weak USB power, IN2 not reaching the H-bridge. -->
 
 ## Sources

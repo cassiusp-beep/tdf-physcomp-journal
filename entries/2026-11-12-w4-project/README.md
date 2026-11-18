@@ -43,6 +43,12 @@ Present Expressive Mechanics at the start of class and submit documentation on b
 
 ![Motor and printed parts](media/07_build_motor_and_printed_parts.jpg)
 
+**At the critique (Nov 12):** the finished turntable with the Flexi Dragon curled around the printed dragon eggs, wired to the Uno and L298N, with the laptop webcam watching for a smile.
+
+| | | |
+|---|---|---|
+| ![Critique, close](media/critique-1.jpg) | ![Critique, three-quarter](media/critique-2.jpg) | ![Critique, at the table](media/critique-3.jpg) |
+
 <!-- Required video: the dragon spinning when you smile (from the critique, if you have it). -->
 
 ## Code and circuit
