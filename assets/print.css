@@ -1,0 +1,12 @@
+body{font-family:-apple-system,"Helvetica Neue",Arial,sans-serif;font-size:11pt;line-height:1.5;color:#1d211f;max-width:760px;margin:0 auto;padding:24px}
+h1{font-size:20pt;margin-top:1.6em;border-bottom:2px solid #2f6b55;padding-bottom:4px}
+h2{font-size:13pt;color:#2f6b55;margin-top:1.4em}
+img{max-width:100%;max-height:4.2in;height:auto;object-fit:contain}
+img[alt="diagram"],p>img:only-child[src^="data:image/svg"]{width:100%;max-height:8.6in;object-fit:contain;page-break-inside:avoid}
+table{border-collapse:collapse;width:100%;font-size:10pt}
+td,th{border:1px solid #dde1db;padding:4px 6px;vertical-align:top}
+td img{max-height:180px}
+pre,code{font-family:Menlo,Consolas,monospace;font-size:9pt}
+pre{background:#f3f4f1;padding:8px;overflow-x:auto;white-space:pre-wrap}
+.newpage,hr{page-break-after:always;border:0}
+header#title-block-header{border-bottom:3px solid #1d211f;margin-bottom:2em}

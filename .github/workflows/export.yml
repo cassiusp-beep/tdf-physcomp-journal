@@ -1,0 +1,55 @@
+name: Export for bCourses
+
+on:
+  workflow_dispatch:
+    inputs:
+      submission:
+        description: "Which submission"
+        required: true
+        default: project-2
+        type: choice
+        options: [project-1, project-2, all]
+
+permissions:
+  contents: write
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Install pandoc and mermaid-cli
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq pandoc
+          npm install -g @mermaid-js/mermaid-cli@11.4.2
+      - name: Combine entries
+        run: python3 scripts/journal.py export "${{ inputs.submission }}"
+      - name: Render diagrams, HTML and PDF
+        run: |
+          name="journal-${{ inputs.submission }}"
+          echo '{"args":["--no-sandbox"]}' > puppeteer.json
+          mmdc -p puppeteer.json -i "build/$name.md" -o "build/$name.rendered.md" -e svg
+          pandoc "build/$name.rendered.md" -s --embed-resources --resource-path=.:build \
+            --css assets/print.css --metadata lang=en -o "build/$name.html"
+          google-chrome --headless=new --no-sandbox --disable-gpu \
+            --no-pdf-header-footer --print-to-pdf="build/$name.pdf" "file://$PWD/build/$name.html"
+          ls -la build
+      - name: Upload as a release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          name="journal-${{ inputs.submission }}"
+          tag="${{ inputs.submission }}-$(date -u +%Y%m%d-%H%M)"
+          gh release create "$tag" "build/$name.pdf" "build/$name.html" \
+            --title "Journal export: ${{ inputs.submission }} ($(TZ=America/Los_Angeles date '+%b %-d, %Y'))" \
+            --notes "Download the PDF and upload it to bCourses."
+      - uses: actions/upload-artifact@v4
+        with:
+          name: journal-${{ inputs.submission }}
+          path: build/journal-${{ inputs.submission }}.*
