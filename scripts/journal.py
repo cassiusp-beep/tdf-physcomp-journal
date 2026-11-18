@@ -195,6 +195,9 @@ def cmd_export(a):
     out.mkdir(exist_ok=True)
     parts = [f"---\ntitle: \"{sub['title']}\"\nauthor: \"{CFG['author']}\"\n"
              f"subtitle: \"{CFG['course']} · {CFG['term']}\"\ndate: \"{dt.date.today():%B %-d, %Y}\"\n---\n"]
+    ai = re.search(r"## AI use\n.*?(?=\n## )", README.read_text(), re.S)
+    if ai:
+        parts.append(ai.group(0).strip() + '\n\n<div class="newpage"></div>\n')
     for m in picked:
         body = re.sub(r"<!--.*?-->\n?", "", m["_body"], flags=re.S)
         rel = m["_dir"].relative_to(ROOT).as_posix()
