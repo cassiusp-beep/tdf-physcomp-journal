@@ -46,7 +46,9 @@ Project 1, Expressive Mechanics: "Give the machine emotions." A kinetic sculptur
 
 ![Printed rods with the H-bridge and motor](media/06_build_hbridge_motor_printed_rods.jpg)
 
-<!-- Required video: any clip of the camshaft turning or jamming. -->
+![Camshaft dragon automaton: slideshow of sketches, renders and build photos](media/camshaft-automaton-slideshow.gif)
+
+[Video: camshaft automaton slideshow (MP4, 20 s)](media/camshaft-automaton-slideshow.mp4). There's no footage of the automaton running, since it jammed before it could turn freely, so this is a captioned slideshow of the reference, sketches, Rhino model, renders and build photos, in the order the design developed.
 
 ## Code and circuit
 

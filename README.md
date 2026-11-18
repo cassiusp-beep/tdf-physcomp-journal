@@ -18,7 +18,7 @@ The table rebuilds itself on every push. "Missing" lists the required parts an e
 | 2026-10-29 | 2 | Fabrication | [W2 E2: Ring review, mechanisms and 3D printing](entries/2026-10-29-w2-fabrication/README.md) · [Medium](https://medium.com/@cassiusp/w2-e2-tdf-physcomp-eac642b391b3) | C18 | ready | none |
 | 2026-11-03 | 3 | Electronics | [W3 E1: The Personal Space Servo](entries/2026-11-03-w3-electronics/README.md) | C19 | draft | none |
 | 2026-11-05 | 3 | Fabrication | [W3 E2: 3D printing the 737 ring](entries/2026-11-05-w3-fabrication/README.md) | C20 | draft | none |
-| 2026-11-10 | 4 | Project | [W4 E1: Expressive Mechanics, the camshaft dragon automaton](entries/2026-11-10-w4-project/README.md) | C19 | draft | video |
+| 2026-11-10 | 4 | Project | [W4 E1: Expressive Mechanics, the camshaft dragon automaton](entries/2026-11-10-w4-project/README.md) | C19 | draft | none |
 | 2026-11-12 | 4 | Diagrammatic analysis | [W4 analysis: the turntable dragon as a system](entries/2026-11-12-w4-analysis/README.md) | C17 | draft | none |
 | 2026-11-12 | 4 | Project | [W4 E2: Expressive Mechanics, the smile-controlled turntable dragon](entries/2026-11-12-w4-project/README.md) | C07 | draft | video |
 | 2026-11-17 | 5 | Electronics | [W5 E1: ESP32 and web APIs](entries/2026-11-17-w5-electronics/README.md) | C23 | draft | video, images, code, write-up |

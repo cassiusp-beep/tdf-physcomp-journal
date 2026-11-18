@@ -43,6 +43,8 @@ Present Expressive Mechanics at the start of class and submit documentation on b
 
 ![Motor and printed parts](media/07_build_motor_and_printed_parts.jpg)
 
+![smile_dragon.py running on the laptop webcam: the overlay reads "off, smile +6% (on at +10%)", so the dragon stays still until the smile crosses the threshold](media/smile-detector-running.jpg)
+
 **At the critique (Nov 12):** the finished turntable with the Flexi Dragon curled around the printed dragon eggs, wired to the Uno and L298N, with the laptop webcam watching for a smile.
 
 | | | |
