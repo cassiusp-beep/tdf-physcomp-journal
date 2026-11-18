@@ -129,8 +129,8 @@ def missing_parts(m):
             miss.append("diagram")
         return miss
     for name, rx in REQUIRED:
-        if name in ("code", "circuit") and etype == "fabrication":
-            continue
+        if name in ("code", "circuit", "video") and etype == "fabrication":
+            continue  # ring/fab homework asks to bring the piece and document it, no video [C16; C18]
         if name == "code":
             files = [p for p in (folder / "code").glob("**/*") if p.is_file() and p.name != ".gitkeep"] \
                 if (folder / "code").exists() else []
