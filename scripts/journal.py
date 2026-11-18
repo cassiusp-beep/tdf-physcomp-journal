@@ -129,13 +129,15 @@ def missing_parts(m):
             miss.append("diagram")
         return miss
     for name, rx in REQUIRED:
+        if name in ("code", "circuit") and etype == "fabrication":
+            continue
         if name == "code":
             files = [p for p in (folder / "code").glob("**/*") if p.is_file() and p.name != ".gitkeep"] \
                 if (folder / "code").exists() else []
             if not files and "```" not in body and "github.com" not in body:
                 miss.append("code")
         elif name == "write-up":
-            sec = re.search(r"## Results and reflection\n(.*?)(\n## |\Z)", body, re.S)
+            sec = re.search(r"#{2,3} (?:Results and reflection|Reflection)\n(.*?)(\n#{2,3} |\Z)", body, re.S)
             txt = re.sub(r"<!--.*?-->", "", sec.group(1), flags=re.S).strip() if sec else ""
             if len(txt.split()) < 40:
                 miss.append("write-up")

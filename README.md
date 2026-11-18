@@ -12,12 +12,12 @@ The table rebuilds itself on every push. "Missing" lists the required parts an e
 <!-- INDEX:START -->
 | Date | Wk | Type | Entry | Slides | Status | Missing |
 |---|---|---|---|---|---|---|
-| 2026-10-20 | 1 | Electronics | [Arduino setup and first sketches](entries/2026-10-20-w1-electronics/README.md) | C15 | draft | video, images, code, write-up |
-| 2026-10-22 | 1 | Fabrication | [Laser cutting the 737 two-finger ring](entries/2026-10-22-w1-fabrication/README.md) | C16 | draft | video, images, code, write-up |
-| 2026-10-27 | 2 | Electronics | [LEDs and an LDR](entries/2026-10-27-w2-electronics/README.md) | C17 | draft | video, images, code, write-up |
-| 2026-10-29 | 2 | Fabrication | [Laser-cut ring review and intro to 3D printing](entries/2026-10-29-w2-fabrication/README.md) | C18 | draft | video, images, code, write-up |
+| 2026-10-20 | 1 | Electronics | [W1 E1: Kickoff, the kit and first circuits](entries/2026-10-20-w1-electronics/README.md) · [Medium](https://medium.com/@cassiusp/w1-e1-tdf-physcomp-23bf40edd487) | C15 | ready | none |
+| 2026-10-22 | 1 | Fabrication | [W1 E2: Laser cutting, joinery and the 737 ring](entries/2026-10-22-w1-fabrication/README.md) · [Medium](https://medium.com/@cassiusp/w1-e2-tdf-physcomp-ea0f7cbf61ea) | C16 | ready | video, write-up |
+| 2026-10-27 | 2 | Electronics | [W2 E1: Reading the board and the voltage divider](entries/2026-10-27-w2-electronics/README.md) · [Medium](https://medium.com/@cassiusp/w2-e1-tdf-physcomp-f884e30fba15) | C17 | ready | video |
+| 2026-10-29 | 2 | Fabrication | [W2 E2: Ring review, mechanisms and 3D printing](entries/2026-10-29-w2-fabrication/README.md) · [Medium](https://medium.com/@cassiusp/w2-e2-tdf-physcomp-eac642b391b3) | C18 | ready | video |
 | 2026-11-03 | 3 | Electronics | [Motion, Detected: a PIR sensor that moves a servo](entries/2026-11-03-w3-electronics/README.md) | C19 | draft | video, images, code, write-up |
-| 2026-11-05 | 3 | Fabrication | [3D printing the 737 ring](entries/2026-11-05-w3-fabrication/README.md) | C19 | draft | video, code, write-up |
+| 2026-11-05 | 3 | Fabrication | [3D printing the 737 ring](entries/2026-11-05-w3-fabrication/README.md) | C19 | draft | video, write-up |
 | 2026-11-10 | 4 | Project | [Expressive Mechanics, part 1: the camshaft dragon automaton](entries/2026-11-10-w4-project/README.md) | C19 | draft | video, write-up |
 | 2026-11-12 | 4 | Diagrammatic analysis | [Diagrammatic analysis: the turntable dragon as a system](entries/2026-11-12-w4-analysis/README.md) | C17 | draft | none |
 | 2026-11-12 | 4 | Project | [Expressive Mechanics, part 2: the smile-controlled turntable dragon](entries/2026-11-12-w4-project/README.md) | C07 | draft | video, write-up |
@@ -57,4 +57,4 @@ python3 scripts/journal.py export project-2        # build/journal-project-2.md,
 3. Write **Results and reflection** in your own words. The course allows AI as a learning and productivity aid, not for submitting AI-generated work as your own [C01, slide 46].
 4. Change `status: draft` to `status: ready` in the front matter.
 
-Medium articles: see [sources/medium.md](sources/medium.md). Put exported PDFs in `sources/medium-pdfs/` and link the story URL in the entry's `medium:` field.
+Medium articles: weeks 1 and 2 are reproduced from the published Medium stories, with the original PDFs in `sources/medium-pdfs/`. To bring in a new one, see [sources/medium.md](sources/medium.md).
