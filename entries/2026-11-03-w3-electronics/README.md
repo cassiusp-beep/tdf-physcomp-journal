@@ -1,5 +1,5 @@
 ---
-title: "W3 E1: Personal space, a PIR build and an ultrasonic sign"
+title: "W3 E1: The Personal Space Servo"
 date: 2026-11-03
 week: 3
 type: electronics
@@ -9,7 +9,7 @@ medium:
 status: draft
 ---
 
-# W3 E1: Personal space, a PIR build and an ultrasonic sign
+# W3 E1: The Personal Space Servo
 
 **Week 3 · Electronics · Tue Nov 3, 2026**
 Lecture: [C19](../../sources/lecture-slides.md) · Tinkercad: [Personal Space Servo](https://www.tinkercad.com/things/iATx6h2WW2H-personal-space-servo)
@@ -20,17 +20,15 @@ Lecture: [C19](../../sources/lecture-slides.md) · Tinkercad: [Personal Space Se
 
 ## What I did
 
-I explored the prompt with both sensors, around one idea: a servo that reacts to someone entering your personal space.
-
-**Physical build: PIR + servo.** On the kit's Arduino Uno, I wired a PIR motion sensor to a micro servo so that someone walking into view makes the servo turn. I built it and brought it to class on Tuesday, November 3, but I forgot to document the process entirely: no photos, no video, no saved code. Given my time constraints I won't be reconstructing it, so the PIR build isn't documented below, and the Tinkercad version stands as the record of this exercise.
-
-**Tinkercad build: the Personal Space Servo (ultrasonic).** In Tinkercad I built the same idea with the ultrasonic distance sensor (HC-SR04) instead. The servo horn acts as a sign:
+I chose the ultrasonic sensor and built around one idea: a servo that reacts when someone steps into your personal space. The servo horn acts as a sign:
 
 - Nobody within 50 cm: the sign lies horizontal (0°).
 - Someone closer than 50 cm for half a second: the sign stands vertical (90°) and gives a warning shake of 15° each way.
 - Once they back off for a full second, the sign eases back down.
 
 The code smooths the distance readings and adds 5 cm of hysteresis at the boundary, so the sign doesn't flicker when someone stands right at the edge. The two delays give it a little patience: a passer-by doesn't trigger it, and it doesn't drop the moment you step back.
+
+I designed and simulated it in Tinkercad first, then built it on the kit's Arduino Uno with the HC-SR04 ultrasonic sensor and a micro servo, and brought it to class on Tuesday, November 3. I forgot to document the physical build entirely: no photos or video. Given my time constraints I won't be reconstructing it, so the Tinkercad design, which the physical build followed, stands as the record below.
 
 ## Media
 
@@ -75,11 +73,11 @@ const int SHAKE_AMOUNT = 15;     // degrees each way for the warning shake
 
 ## Results and reflection
 
-Working with both sensors showed me how much the choice of sensor decides what a machine can know. The PIR asks only whether anyone is there, so my class build could switch between two states but never track a person. The ultrasonic sensor measures how far away you are, which let the Tinkercad version draw a line: 50 cm becomes a boundary, and crossing it is what the sign reacts to.
+Choosing the ultrasonic sensor over the PIR changed what the machine could know. A PIR only senses that something warm moved, so a servo driven by it can only switch on and off. The ultrasonic sensor measures how far away you are, which let me draw a line: 50 cm becomes a boundary, and crossing it is what the sign reacts to.
 
-The timing turned into behavior. The PIR holds its signal for a few seconds after motion stops, so the servo lingered before relaxing. In the Personal Space Servo I designed that delay on purpose: half a second before it reacts, a full second before it relaxes. Those two numbers are what make it read as a polite warning rather than a twitchy alarm.
+The timing turned into behavior. Half a second before it reacts and a full second before it relaxes are what make it read as a polite warning rather than a twitchy alarm. The hysteresis matters for the same reason: without it, someone standing right at 50 cm would make the sign stutter up and down.
 
-The lesson I'm keeping is about documentation. I brought the PIR build to class without documenting any of it, and rather than rebuild it on a tight schedule, I'm letting the Tinkercad version stand as the record. Next time the phone comes out before the breadboard does.
+Simulating in Tinkercad first let me tune those numbers before touching hardware. The lesson I'm keeping is about documentation. I brought the build to class without recording any of it, and rather than rebuild it on a tight schedule, I'm letting the Tinkercad version stand as the record. Next time the phone comes out before the breadboard does.
 
 _AI use: drafted with Claude from my build notes, Tinkercad design and code, then reviewed by me [C01, slide 46]._
 
