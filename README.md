@@ -3,7 +3,7 @@
 Cassius Palacio · DESINV 202 Technology Design Foundations, Physical Computing section · UC Berkeley MDes · Fall 2026
 Instructors: Chris Myers, Sudhu Tewari · GSI: Alistair Vizuet
 
-Two entries a week (Tuesday electronics, Thursday fabrication). Electronics and project entries need a video, images, code and a circuit diagram, and a short write-up [C17, slide 28]; fabrication entries need images and a write-up [C16; C18]. One diagrammatic analysis of a system per submission [C17, slide 7]. Lecture slides are cited by key; see [sources/lecture-slides.md](sources/lecture-slides.md).
+Two entries a week (Tuesday electronics, Thursday fabrication). Electronics and project entries need a video, images, code and a circuit diagram, and a short write-up [C17, slide 28]; fabrication entries need images and a write-up [C16; C18]. One diagrammatic analysis of a system per submission [C17, slide 7]. Lecture slides are cited by key; see [sources/lecture-slides.md](sources/lecture-slides.md). The Expressive Mechanics build lives in its own repo, [turntable-dragon](https://github.com/cassiusp-beep/turntable-dragon) [R-DRAGON].
 
 ## Entries
 

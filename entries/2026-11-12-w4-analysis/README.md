@@ -53,5 +53,6 @@ The same chain, located on the finished build at the Nov 12 critique: the laptop
 
 ## Sources
 
+- [R-DRAGON] Palacio, [turntable-dragon](https://github.com/cassiusp-beep/turntable-dragon) repository: CAD, firmware, interaction code and build notes
 - [C17] class 17 deck, journal requirements (diagrammatic analysis)
 - System details from the [turntable-dragon](https://github.com/cassiusp-beep/turntable-dragon) README

@@ -45,6 +45,12 @@ Decks for Nov 10 and Nov 12 (classes 21 and 22) weren't posted in the folder as 
 | T-ROOPA | R. Ramanujam, *ESP32 web API example* (weather) | https://github.com/roopa-ramanujam/ESP32-web-api-example |
 | T-METEO | Open-Meteo forecast API (example request in C23) | https://api.open-meteo.com/v1/forecast?latitude=37.876270&longitude=-122.258499&current_weather=true&temperature_unit=fahrenheit |
 
+## My project repositories
+
+| Key | Repository | Link |
+|---|---|---|
+| R-DRAGON | C. Palacio, *turntable-dragon*: Expressive Mechanics build (CAD generators, firmware, smile and scream interaction code, build notes, renders) | https://github.com/cassiusp-beep/turntable-dragon |
+
 ## Course briefs (bCourses)
 
 | Key | Brief |

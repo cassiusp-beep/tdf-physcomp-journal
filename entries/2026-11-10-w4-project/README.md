@@ -69,6 +69,7 @@ I'd keep the parametric approach. Driving the whole model from Python made it fa
 
 ## Sources
 
+- [R-DRAGON] Palacio, [turntable-dragon](https://github.com/cassiusp-beep/turntable-dragon) repository: CAD, firmware, interaction code and build notes
 - [C19] 2026 TDF - PhysComp class 19 - Project 1 intro - p5.js
 - [B-EM] Expressive Mechanics brief
 - Flexi Dragon by D3Craft (MakerWorld, Standard Digital File License)

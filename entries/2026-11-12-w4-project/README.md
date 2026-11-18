@@ -74,6 +74,7 @@ Bench testing taught me to suspect power and wiring before code: weak USB power,
 
 ## Sources
 
+- [R-DRAGON] Palacio, [turntable-dragon](https://github.com/cassiusp-beep/turntable-dragon) repository: CAD, firmware, interaction code and build notes
 - [C07] class 07 deck, critique format and submission
 - [B-EM] Expressive Mechanics brief
 - [T-CV] Tewari, TDF_ComputerVision_HeadPositionControlsServo (starting point for camera to Arduino)
