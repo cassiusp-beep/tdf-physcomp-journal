@@ -6,7 +6,7 @@ type: project
 project: expressive-mechanics
 slides: C07
 medium:
-status: draft
+status: ready
 ---
 
 # W4 E2: Expressive Mechanics, the smile-controlled turntable dragon

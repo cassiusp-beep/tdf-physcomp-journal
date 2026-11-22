@@ -6,7 +6,7 @@ type: electronics
 project: pre-projects
 slides: C19
 medium:
-status: draft
+status: ready
 ---
 
 # W3 E1: The Personal Space Servo

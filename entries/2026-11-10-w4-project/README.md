@@ -6,7 +6,7 @@ type: project
 project: expressive-mechanics
 slides: C19
 medium:
-status: draft
+status: ready
 ---
 
 # W4 E1: Expressive Mechanics, the camshaft dragon automaton

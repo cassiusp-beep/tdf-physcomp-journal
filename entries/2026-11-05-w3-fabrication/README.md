@@ -6,7 +6,7 @@ type: fabrication
 project: pre-projects
 slides: C20
 medium:
-status: draft
+status: ready
 ---
 
 # W3 E2: 3D printing the 737 ring

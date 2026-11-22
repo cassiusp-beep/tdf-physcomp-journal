@@ -6,7 +6,7 @@ type: analysis
 project: expressive-mechanics
 slides: C17
 medium:
-status: draft
+status: ready
 ---
 
 # W4 analysis: the turntable dragon as a system
