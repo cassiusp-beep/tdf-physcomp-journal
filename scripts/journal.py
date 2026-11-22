@@ -76,6 +76,12 @@ def slug(s):
 def cmd_new(a):
     tz_today = dt.datetime.now(dt.timezone(dt.timedelta(hours=-8))).date()
     date = d(a.date) if a.date else tz_today
+    if getattr(a, "catch_up", False) and not a.date:
+        # Scheduled runs can fire hours late (the next morning); step back to the latest class day.
+        for _ in range(6):
+            if CFG["entry_types"].get(date.strftime("%A").lower()):
+                break
+            date -= dt.timedelta(days=1)
     if not a.force:
         if not (d(CFG["first_class"]) <= date <= d(CFG["last_class"])):
             print(f"{date} is outside the course dates; nothing to do."); return
@@ -217,6 +223,7 @@ def main():
     s = p.add_subparsers(dest="cmd", required=True)
     n = s.add_parser("new"); n.add_argument("--date"); n.add_argument("--title")
     n.add_argument("--type"); n.add_argument("--force", action="store_true")
+    n.add_argument("--catch-up", dest="catch_up", action="store_true")
     s.add_parser("index"); s.add_parser("check")
     e = s.add_parser("export"); e.add_argument("submission", choices=list(CFG["submissions"]))
     e.add_argument("--out", default="build")

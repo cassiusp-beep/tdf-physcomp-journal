@@ -35,8 +35,8 @@ jobs:
         run: |
           args=()
           if [ "${{ github.event_name }}" = "schedule" ]; then
-            # 05:13 UTC is 9:13 PM the evening before in Pacific time
-            args+=(--date "$(TZ=America/Los_Angeles date +%F)")
+            # Scheduled runs can start hours late, so step back to the latest class day
+            args+=(--catch-up)
           fi
           [ -n "$IN_DATE" ] && args+=(--date "$IN_DATE")
           [ -n "$IN_TITLE" ] && args+=(--title "$IN_TITLE")
