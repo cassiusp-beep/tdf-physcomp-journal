@@ -6,7 +6,7 @@ type: electronics
 project: ambient-display
 slides: C23
 medium:
-status: ready
+status: draft
 ---
 
 # W5 E1: ESP32 and web APIs
