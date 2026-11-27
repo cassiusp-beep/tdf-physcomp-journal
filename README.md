@@ -21,9 +21,9 @@ The table rebuilds itself on every push. "Missing" lists the required parts an e
 | 2026-11-10 | 4 | Project | [W4 E1: Expressive Mechanics, the camshaft dragon automaton](entries/2026-11-10-w4-project/README.md) | C19 | ready | none |
 | 2026-11-12 | 4 | Diagrammatic analysis | [W4 analysis: the turntable dragon as a system](entries/2026-11-12-w4-analysis/README.md) | C17 | ready | none |
 | 2026-11-12 | 4 | Project | [W4 E2: Expressive Mechanics, the smile-controlled turntable dragon](entries/2026-11-12-w4-project/README.md) | C07 | ready | none |
-| 2026-11-17 | 5 | Electronics | [W5 E1: ESP32 and web APIs](entries/2026-11-17-w5-electronics/README.md) | C23 | draft | video, images, code, write-up |
-| 2026-11-19 | 5 | Fabrication | [Week 5 Fabrication](entries/2026-11-19-w5-fabrication/README.md) |  | draft | images, write-up |
-| 2026-11-24 | 6 | Electronics | [Week 6 Electronics](entries/2026-11-24-w6-electronics/README.md) |  | draft | video, images, code, write-up |
+| 2026-11-17 | 5 | Electronics | [W5 E1: ESP32 and web APIs](entries/2026-11-17-w5-electronics/README.md) | C23 | ready | none |
+| 2026-11-19 | 5 | Fabrication | [W5 E2: Enclosures and heat-set inserts](entries/2026-11-19-w5-fabrication/README.md) | C24 | ready | none |
+| 2026-11-24 | 6 | Electronics | [W6 E1: Getting the ESP32 online](entries/2026-11-24-w6-electronics/README.md) | C25 | ready | video |
 <!-- INDEX:END -->
 
 ## Deadlines
