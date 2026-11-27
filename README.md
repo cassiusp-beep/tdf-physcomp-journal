@@ -33,7 +33,9 @@ The table rebuilds itself on every push. "Missing" lists the required parts an e
 | Thu Nov 12, 2026 | Project 1: Expressive Mechanics presented |
 | **Thu Nov 19, 2026** | **Project 1 documentation due on bCourses (extended)** [C23, slide 4] |
 | Tue Nov 24, 2026 | ESP32 setup and web API homework [C23, slides 17 and 19] |
-| Tue Dec 8, 2026 | Project 2: Ambient Display due at the Jacobs Design Showcase |
+| Thu Dec 3, 2026 | Project 2: working prototype demo [C24] |
+| Tue Dec 8, 2026 | Jacobs Design Showcase, Jacobs 310, 12:00 to 3:30 pm [C25] |
+| Tue Dec 15, 2026 | Project 2: Ambient Display documentation due on bCourses [C24; C25] |
 
 ## AI use
 
